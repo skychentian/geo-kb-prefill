@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{{BRAND_NAME}} · 品牌知识库</title>
+<style>
+:root {
+  --porcelain:#f6f4ef; --tray:#edeae2; --plate:#fffefa;
+  --line:#e8e3d8; --line2:#ddd6c6;
+  --ink:#23211b; --ink2:#57544a; --muted:#9b968a;
+  --blue:#2f5bff; --blue-deep:#1f3fb8; --blue-soft:#e4ebff; --blue-faint:#f0f4ff;
+  --ok:#3e7d5b; --ok-soft:#e6f0ea; --warn:#a26a1e; --warn-soft:#f6ecdc;
+  --dan:#b04a44; --dan-soft:#f7e6e4;
+  --sh1:0 1px 2px rgba(47,91,255,.05),0 1px 3px rgba(60,54,35,.05);
+  --sh2:0 1px 2px rgba(60,54,35,.04),0 12px 32px rgba(47,91,255,.07);
+  --r-card:18px; --r-tile:12px; --r-pill:999px;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body { font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--porcelain); color:var(--ink); font-size:14px; line-height:1.65; }
+.app { display:flex; min-height:100vh; }
+.side { width:238px; flex-shrink:0; padding:20px 14px; border-right:1px solid var(--line); position:sticky; top:0; height:100vh; overflow:auto; }
+.logo { display:flex; align-items:center; gap:10px; font-weight:700; padding:4px 8px 16px; }
+.mark { width:30px; height:30px; border-radius:11px; background:var(--blue); color:#fff; display:grid; place-items:center; font-size:12px; }
+.nav a { display:block; padding:8px 10px; border-radius:12px; color:var(--ink2); text-decoration:none; font-size:13px; }
+.nav a:hover,.nav a:target { background:var(--plate); color:var(--blue-deep); }
+.complete { margin-top:18px; background:var(--plate); border:1px solid var(--line); border-radius:14px; padding:12px; box-shadow:var(--sh1); }
+.complete b { color:var(--blue); font-size:22px; }
+main { flex:1; padding:28px 36px 64px; min-width:0; }
+.banner { background:var(--blue-faint); border:1px solid var(--blue-soft); color:var(--blue-deep); border-radius:var(--r-pill); padding:8px 16px; font-size:12px; margin-bottom:18px; }
+.eyebrow { display:inline-flex; gap:7px; align-items:center; font-size:10px; letter-spacing:.16em; font-weight:700; color:var(--blue-deep); background:var(--blue-soft); padding:5px 13px; border-radius:var(--r-pill); }
+.eyebrow:before { content:""; width:5px; height:5px; border-radius:50%; background:var(--blue); }
+h1 { font-size:28px; letter-spacing:-.02em; margin:12px 0 6px; }
+.sub { color:var(--muted); font-size:13px; }
+.hero { display:grid; grid-template-columns:1.4fr .8fr; gap:16px; margin:22px 0 28px; }
+.card { background:var(--plate); border:1px solid var(--line); border-radius:var(--r-card); padding:20px; box-shadow:var(--sh1); }
+.kvs { display:grid; grid-template-columns:120px 1fr; gap:8px 12px; font-size:13px; }
+.kvs dt { color:var(--muted); }
+section { margin:28px 0; scroll-margin-top:20px; }
+section h2 { font-size:18px; margin-bottom:12px; }
+table { width:100%; border-collapse:collapse; font-size:13px; }
+th,td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+th { color:var(--muted); font-weight:600; }
+.tag { display:inline-block; padding:2px 8px; border-radius:var(--r-pill); font-size:11px; }
+.ok { background:var(--ok-soft); color:var(--ok); }
+.warn { background:var(--warn-soft); color:var(--warn); }
+.miss { background:var(--dan-soft); color:var(--dan); }
+.src { background:var(--blue-soft); color:var(--blue-deep); }
+.empty { border:1.5px dashed var(--line2); border-radius:14px; padding:16px; color:var(--muted); }
+blockquote { border-left:3px solid var(--blue); padding:4px 0 4px 12px; color:var(--ink2); }
+@media (max-width:860px) {
+  .app { display:block; }
+  .side { position:relative; width:auto; height:auto; border-right:0; border-bottom:1px solid var(--line); }
+  .hero { grid-template-columns:1fr; }
+  main { padding:20px 16px 48px; }
+}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="side">
+  <div class="logo"><span class="mark">KB</span>{{BRAND_NAME}}</div>
+  <nav class="nav">
+    <a href="#basic">基本信息</a>
+    <a href="#position">品牌定位</a>
+    <a href="#offer">产品与服务</a>
+    <a href="#edge">竞争力</a>
+    <a href="#proof">权威背书</a>
+    <a href="#market">市场数据</a>
+    <a href="#cases">案例与口碑</a>
+    <a href="#story">品牌故事</a>
+    <a href="#partners">合作生态</a>
+    <a href="#compete">竞品对照</a>
+    <a href="#safety">内容安全</a>
+    <a href="#qa">常见问答</a>
+    <a href="#sources">信源清单</a>
+  </nav>
+  <div class="complete">完成度<br><b>{{COMPLETENESS}}</b></div>
+</aside>
+<main>
+  <div class="banner">此页仅供查看。如需修改，请在配套 Markdown 中修订后发回，我们会更新展示页。</div>
+  <div class="eyebrow">BRAND KNOWLEDGE</div>
+  <h1>{{BRAND_NAME}}</h1>
+  <p class="sub">{{ONE_LINER}}</p>
+  <div class="hero">
+    <div class="card">
+      <dl class="kvs">{{BASIC_ROWS}}</dl>
+    </div>
+    <div class="card">
+      <p>{{SLOGAN}}</p>
+      <p class="sub" style="margin-top:10px">整理日期 {{DATE}} · 过时信息已单独标注</p>
+    </div>
+  </div>
+  <!-- 按模块把 {{SECTION_*}} 换成真实内容。缺项用 class="empty" -->
+  <section id="basic"><h2>基本信息</h2>{{SECTION_BASIC}}</section>
+  <section id="position"><h2>品牌定位与业务边界</h2>{{SECTION_POSITION}}</section>
+  <section id="offer"><h2>产品与服务</h2>{{SECTION_OFFER}}</section>
+  <section id="edge"><h2>竞争力与研发</h2>{{SECTION_EDGE}}</section>
+  <section id="proof"><h2>权威背书</h2>{{SECTION_PROOF}}</section>
+  <section id="market"><h2>市场数据</h2>{{SECTION_MARKET}}</section>
+  <section id="cases"><h2>案例与口碑</h2>{{SECTION_CASES}}</section>
+  <section id="story"><h2>品牌故事</h2>{{SECTION_STORY}}</section>
+  <section id="partners"><h2>合作生态</h2>{{SECTION_PARTNERS}}</section>
+  <section id="compete"><h2>竞品对照</h2>{{SECTION_COMPETE}}</section>
+  <section id="safety"><h2>内容安全边界</h2>{{SECTION_SAFETY}}</section>
+  <section id="qa"><h2>常见问答</h2>{{SECTION_QA}}</section>
+  <section id="sources"><h2>信源清单</h2>{{SECTION_SOURCES}}</section>
+</main>
+</div>
+</body>
+</html>

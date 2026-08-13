@@ -1,0 +1,24 @@
+name: geo-kb-prefill
+job: 检索客户公开信息，确认后输出可改 Markdown 与只读 HTML 品牌知识库
+inputs:
+  - brand_name
+  - optional_local_files
+  - optional_official_urls
+outputs:
+  - markdown_knowledge_base
+  - readonly_html_viewer
+exclusions:
+  - presale_proposal
+  - question_bank
+  - eeat_article
+activation:
+  - 预填知识库
+  - 深搜品牌
+  - 出知识库展示页
+trust:
+  - no_fabrication
+  - local_over_web
+  - source_checklist_required
+degradation:
+  - 无网页搜索时只整理本地资料
+  - 无社媒工具时用搜索引擎 site: 降级
