@@ -18,7 +18,12 @@ git clone https://github.com/skychentian/geo-kb-prefill.git ~/.grok/skills/geo-k
 
 # Cursor
 git clone https://github.com/skychentian/geo-kb-prefill.git ~/.cursor/skills/geo-kb-prefill
+
+# WorkBuddy（腾讯）
+git clone https://github.com/skychentian/geo-kb-prefill.git ~/.workbuddy/skills/geo-kb-prefill
 ```
+
+WorkBuddy 也可以在技能页点「添加技能 → 上传技能」，把本仓库打成 zip 后拖进去。zip 里要能直接看到 `SKILL.md`，不要多包一层无关目录。
 
 已有目录要更新：
 
@@ -46,9 +51,10 @@ Agent 会先问缺的关键项（官网、本地资料、不能对外写的内�
 
 ## 需要什么
 
-- 能上网的 Agent（Claude Code、Codex、Grok、Cursor 均可）
+- 能上网、能搜网页的 Agent（Claude Code、Codex、Grok、Cursor、WorkBuddy 均可）
 - 不依赖飞书、不依赖特定付费搜索 API
 - 有 Tavily / 社媒 CLI 会更深，没有也能跑
+- WorkBuddy 里请确认已打开网页搜索；没搜索能力时，这个 skill 只能整理你丢进去的本地资料
 
 ## 不做什么
 
