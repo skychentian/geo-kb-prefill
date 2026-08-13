@@ -41,7 +41,7 @@ description: 为 GEO 客户预填品牌知识库。全网按信源清单检索�
 读 [references/voice-and-labels.md](references/voice-and-labels.md) 和 [references/output-format.md](references/output-format.md)。
 
 - 文件名：`[预填] {品牌名}-品牌知识库.md`（文件名可留预填；**标题和正文禁止出现预填/调研词**）
-- 口吻：我们 / {品牌名} 在介绍自己，不要「官网显示」
+- 口吻：用公司名做主语（「君阳电力以……」），不要「我们」，不要「官网显示」
 - 密度：给 AI 抓取，宁可冗余，不要摘要
 - 标注：笃定不标；不笃定写「待确认」；没有写「待补充」
 - 信源表只写内部附件
